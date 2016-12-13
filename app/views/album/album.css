@@ -25,7 +25,7 @@
     padding-top: 30px;
 }
 .gioiThieu{
-    text-align: center;
+    /*text-align: center;*/
     font-size: 30px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -74,14 +74,26 @@
     background: #000;
     text-align: center;
 }
+.text-center{
+    text-align: center;
+}
 .conten{
-    background: #000;
+    background: #4d4d4d;
 }
 .icon{
     font-size: 40px;
     /*background: #4d4d4d;*/
 }
-.home{
+.list-result{
+    padding-top: 60px;
+}
+.row-item-result{
+    padding-top: 50px;
+}
+.item-result{
+    padding-top: 40px;
+}
+.album{
     color:#ff3333;
     font-size: 15px;
 }

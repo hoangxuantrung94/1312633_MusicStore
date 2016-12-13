@@ -1,17 +1,16 @@
 
-var app = angular.module('MusicStore', ["ngSanitize", "ngRoute"]);
+var app = angular.module('MusicStore',[]);
 
-app.config(function($routeProvider){
-    $routeProvider
-        .when('/', {
-            templateUrl: './view/home/home.html',
-            controller: 'homeCtr'
-        })
-        .when('/album', {
-            templateUrl: '/view/album/album.html',
-            controller: 'albumCtr'
-        })
-        .otherwies({
-            redirectTo: '/'
-        })
-});
+    app.config(['$routeProvider',
+    function($routeProvider){
+        $routeProvider.
+        when('/home',{
+            templateUrl: './views/home/home.html'
+        }).
+        when('/album',{
+            templateUrl: './views/album/album.html'
+        }).
+        otherwise({
+            redirectTo: '/home'
+        });
+    }]);
