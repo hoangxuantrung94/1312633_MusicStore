@@ -24,6 +24,10 @@ var app = angular.module('MusicStore',[]);
             templateUrl: './views/detailArtist/detailArtist.html',
             controller: 'detailArtistCtrl'
         }).
+        when('/genre',{
+            templateUrl: './views/genre/genre.html',
+            controller: 'genreCtrl'
+        }).
         otherwise({
             redirectTo: '/home'
         });
