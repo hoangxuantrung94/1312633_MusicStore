@@ -1,5 +1,20 @@
 
-var app = angular.module('MusicStore',[]);
+var app = angular.module('MusicStore',["ngSanitize", "ngAnimate", "ngRoute", "ngCookies"]);
+
+    app.component('navigationbar',{
+        templateUrl: './views/widgets/navigationBar/navigationBar.html',
+        controller: 'navigationbarCtrl'
+    });
+
+    app.component('userLogin',{
+        templateUrl: './views/widgets/userNavigation/userLogin.html',
+        controller: 'navigationbarCtrl'
+    });
+
+    app.component('userLogout',{
+        templateUrl: './views/widgets/userNavigation/userLogout.html',
+        controller: 'navigationbarCtrl'
+    });
 
     app.config(['$routeProvider',
     function($routeProvider){
@@ -7,6 +22,14 @@ var app = angular.module('MusicStore',[]);
         when('/home',{
             templateUrl: './views/home/home.html',
             controller: 'homeCtrl'
+        }).
+        when('/login',{
+            templateUrl: './views/login/login.html',
+            controller: 'loginCtrl'
+        }).
+        when('/register',{
+            templateUrl: './views/login/register/register.html',
+            controller: 'registerCtrl'
         }).
         when('/album',{
             templateUrl: './views/album/album.html',
@@ -27,6 +50,10 @@ var app = angular.module('MusicStore',[]);
         when('/genre',{
             templateUrl: './views/genre/genre.html',
             controller: 'genreCtrl'
+        }).
+        when('/genre/:id',{
+            templateUrl: './views/detailSongOfGenre/detailSongOfGenre.html',
+            controller: 'detailSongOfGenreCtrl'
         }).
         otherwise({
             redirectTo: '/home'

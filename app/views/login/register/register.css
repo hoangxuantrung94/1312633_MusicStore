@@ -1,3 +1,49 @@
+.modal-header{
+    background: #3A6073;
+}
+
+@charset "UTF-8";
+/* CSS Document */
+
+p {
+    color:#CCC;
+}
+
+.spacing {
+    padding-top:7px;
+    padding-bottom:7px;
+}
+.middlePage {
+    width: 680px;
+    position: absolute;
+    top:20%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.logo {
+    color:#CCC;
+}
+
+.btn-login {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 200px;
+}
+
+.error-message{
+    display: none;
+}
+
+.has-error .error-message{
+    display: block;
+}
+.row-login{
+    background: #3A6073;
+}
 .row{
     background: #000;
 }
@@ -25,7 +71,7 @@
     padding-top: 30px;
 }
 .gioiThieu{
-    /*text-align: center;*/
+    text-align: center;
     font-size: 30px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -74,30 +120,14 @@
     background: #000;
     text-align: center;
 }
-.text-center{
-    text-align: center;
-}
 .conten{
-    background: #4d4d4d;
+    background: #000;
 }
 .icon{
     font-size: 40px;
     /*background: #4d4d4d;*/
 }
-.list-result{
-    padding-top: 60px;
-}
-.row-item-result{
-    padding-top: 50px;
-}
-.item-result{
-    padding-top: 40px;
-}
-.genre{
+.home{
     color:#ff3333;
     font-size: 15px;
-}
-
-.itemTab{
-    padding-left: 5px;
 }
