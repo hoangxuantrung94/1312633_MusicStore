@@ -18,9 +18,7 @@
                                 <li><a href="#/artist" style="font-size:15px; color: #FFFFFF">ARTIST</a></li>
                                 <li><a class="album" href="#/album">ALBUM</a></li>
                                 <li><a href="#/genre" style="font-size:15px; color: #FFFFFF">GENRE</a></li>
-                                <li><a href="#" style="font-size:15px; color: #FFFFFF">BLOG</a></li>
-                                <li><a href="#" style="font-size:15px; color: #FFFFFF">EVENTS</a></li>
-                                <li><a href="#" style="font-size:15px; color: #FFFFFF">PAGES</a></li>
+                                <li><a href="#/cart" style="font-size:15px; color: #FFFFFF"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">{{ cartCount1 }}</span></a></li>
                                 <li><a href="#" style="font-size:15px; color: #FFFFFF">CONTACT US</a></li>
                             </ul>
                         </ul>
@@ -66,18 +64,18 @@
                     <tr>
                         <th class="sst">stt</th>
                         <th class="name">name</th>
-                        <th class="download">download</th>
+                        <th class="download">price</th>
                         <th class="buy">buy</th>
                         <th class="play">play</th>
                     </tr>
                     </thead>
                     <tbody class="song" ng-repeat="song in songAlbum">
                     <tr>
-                        <td class="sst">{{ $index }}</td>
+                        <td class="sst">{{ $index+1 }}</td>
                         <td class="name">{{ song.DisplayName }}</td>
-                        <td class="download"><button>download</button></td>
-                        <td class="buy"><button>buy</button></td>
-                        <td class="play"><button>play</button></td>
+                        <td class="download">{{ song.Price }}</td>
+                        <td class="buy"><button type="button" class="btn btn-success" ng-click="by(song._id, song.DisplayName, song.Price, song.AlbumId)">buy</button></td>
+                        <td class="play"><button type="button" class="btn btn-danger">play</button></td>
                     </tr>
                     </tbody>
                 </table>

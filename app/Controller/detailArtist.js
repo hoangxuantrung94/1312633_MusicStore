@@ -1,6 +1,13 @@
-app.controller("detailArtistCtrl", function ($scope, $http, $routeParams) {
+app.controller("detailArtistCtrl", function ($scope, $http, $routeParams, $cookies) {
     $http.get('http://localhost:3000/api/v1/artist/'+ $routeParams.id)
         .then(function (response) {
             $scope.artist = response.data;
         });
+
+    if($cookies.get('byMusic') != null){
+        $scope.list = $cookies.getObject('byMusic');
+        $scope.cartCount1 = $scope.list.length;
+    }else{
+        $scope.cartCount1 = 0;
+    }
 });

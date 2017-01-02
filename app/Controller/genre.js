@@ -1,4 +1,6 @@
-app.controller("genreCtrl", function ($scope, $http) {
+app.controller("genreCtrl", function ($scope, $http, $cookies) {
+
+
 
     $scope.fn_load = function (value) {
         //console.log(value);
@@ -30,16 +32,57 @@ app.controller("genreCtrl", function ($scope, $http) {
             $scope.songs = response.data;
         });
 
-    $scope.data = {
-        selectedIndex: 0,
-        secondLocked:  true,
-        secondLabel:   "Item Two",
-        bottom:        false
+
+
+    $scope.checkLogin = function () {
+        if($cookies.get('webMusicStore_cookies') == null){
+            $cookies.remove('byMusic');
+            window.location = '#/login';
+        }
     };
-    $scope.next = function() {
-        $scope.data.selectedIndex = Math.min($scope.data.selectedIndex + 1, 2) ;
+
+    $scope.by = function (id, name, price, albumId) {
+
+        $scope.checkLogin();
+        //$cookies.remove('byMusic');
+        if($cookies.get('byMusic') != null){
+
+            // lấy danh sách music đã mua
+            itemMusic = [];
+            itemMusic = $cookies.getObject('byMusic');
+            itemMusic.push({
+                "id": id,
+                "name": name,
+                "price": price,
+                "albumId": albumId
+            });
+            $cookies.putObject('byMusic', itemMusic);
+
+            $scope.list = $cookies.getObject('byMusic');
+            console.log($scope.list);
+
+            $scope.cartCount1 = $scope.list.length;
+        }else{
+            // tạo đối tượng json arr
+            itemMusic = [];
+            itemMusic.push({
+                "id": id,
+                "name": name,
+                "price": price,
+                "albumId": albumId
+            });
+            $cookies.putObject('byMusic', itemMusic);
+            $scope.list = $cookies.getObject('byMusic');
+            console.log($scope.list);
+
+            $scope.cartCount1 = $scope.list.length;
+        }
     };
-    $scope.previous = function() {
-        $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
-    };
+
+    if($cookies.get('byMusic') != null){
+        $scope.list = $cookies.getObject('byMusic');
+        $scope.cartCount1 = $scope.list.length;
+    }else{
+        $scope.cartCount1 = 0;
+    }
 });

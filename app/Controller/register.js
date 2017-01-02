@@ -69,7 +69,7 @@ app.controller("registerCtrl", function ($scope, $http, $cookies) {
             });*/
         var merchant = {
             email: $scope.newEmail,
-            password: $scope.password,
+            password: $scope.newPassword,
             displayName: 'viet',
         };
         $http({

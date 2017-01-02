@@ -1,4 +1,4 @@
-app.controller("loginCtrl", function ($scope, $http) {
+app.controller("loginCtrl", function ($scope, $http, $cookies) {
 
     $scope.login  = function () {
         // use $.param jQuery function to serialize data from JSON
@@ -20,12 +20,23 @@ app.controller("loginCtrl", function ($scope, $http) {
             url: "http://localhost:3000/api/v1/login",
             data: merchant
         }).then(function sucess(objet) {
+
+            $cookies.put('webMusicStore_cookies', objet.data.accessToken.accessToken);
+            $cookies.put('webMusicStore_refreshToken', objet.data.refreshToken);
+
             console.log(objet.data);
+            console.log($scope.email);
+            console.log($scope.password);
             console.log('ok');
+
+            window.location.reload();
             window.location = '#/';
         }, function errorCallback(response) {
             console.log(response);
+            console.log($scope.email);
+            console.log($scope.password);
             console.log('err');
+
         });
     };
 

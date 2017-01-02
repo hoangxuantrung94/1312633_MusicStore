@@ -1,9 +1,16 @@
 
 var app = angular.module('MusicStore',["ngSanitize", "ngAnimate", "ngRoute", "ngCookies"]);
 
+var cartCount = 0;
+var itemMusic = [];
     app.component('navigationbar',{
         templateUrl: './views/widgets/navigationBar/navigationBar.html',
         controller: 'navigationbarCtrl'
+    });
+
+    app.component('footer',{
+        templateUrl: './views/footer/footer.html',
+        controller: 'footerCtrl'
     });
 
     app.component('userLogin',{
@@ -54,6 +61,10 @@ var app = angular.module('MusicStore',["ngSanitize", "ngAnimate", "ngRoute", "ng
         when('/genre/:id',{
             templateUrl: './views/detailSongOfGenre/detailSongOfGenre.html',
             controller: 'detailSongOfGenreCtrl'
+        }).
+        when('/cart',{
+            templateUrl: './views/shopping-cart/shopping-cart.html',
+            controller: 'cartCtrl'
         }).
         otherwise({
             redirectTo: '/home'

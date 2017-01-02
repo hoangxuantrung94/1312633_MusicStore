@@ -18,6 +18,7 @@ app.controller("navigationbarCtrl", function ($scope, $cookies) {
         $scope.logiut = function () {
             $cookies.remove('webMusicStore_cookies');
             $cookies.remove('webMusicStore_refreshToken');
+            $cookies.remove('byMusic');
             window.location.reload();
         };
     }

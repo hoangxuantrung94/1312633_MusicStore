@@ -17,9 +17,7 @@
                                 <li><a href="#/artist" style="font-size:15px; color: #FFFFFF">ARTIST</a></li>
                                 <li><a href="#/album" style="font-size:15px; color: #FFFFFF">ALBUM</a></li>
                                 <li><a class="genre" href="#/genre">GENRE</a></li>
-                                <li><a href="#" style="font-size:15px; color: #FFFFFF">BLOG</a></li>
-                                <li><a href="#" style="font-size:15px; color: #FFFFFF">EVENTS</a></li>
-                                <li><a href="#" style="font-size:15px; color: #FFFFFF">PAGES</a></li>
+                                <li><a href="#/cart" style="font-size:15px; color: #FFFFFF"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">{{ cartCount1 }}</span></a></li>
                                 <li><a href="#" style="font-size:15px; color: #FFFFFF">CONTACT US</a></li>
                             </ul>
                         </ul>
@@ -63,6 +61,7 @@
                                             <span class="glyphicon glyphicon-cd" aria-hidden="true"></span>
                                         </div>
                                         <h4 class="serviceItem">{{ song.DisplayName }}</h4>
+                                        <button type="button" class="btn btn-success" ng-click="by(song._id, song.DisplayName, song.Price)">buy</button>
                                     </div>
                                 </a>
                             </div>
