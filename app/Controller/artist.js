@@ -1,6 +1,6 @@
 app.controller("artistCtrl", function ($scope, $http, $cookies) {
 
-    $http.get('http://localhost:3000/api/v1/artist')
+    $http.get('http://music-store-app-1312.herokuapp.com/api/v1/artist')
         .then(function (response) {
             $scope.artists = response.data;
         });

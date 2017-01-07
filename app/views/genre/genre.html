@@ -61,7 +61,7 @@
                                             <span class="glyphicon glyphicon-cd" aria-hidden="true"></span>
                                         </div>
                                         <h4 class="serviceItem">{{ song.DisplayName }}</h4>
-                                        <button type="button" class="btn btn-success" ng-click="by(song._id, song.DisplayName, song.Price)">buy</button>
+                                        <button type="button" class="btn btn-success" ng-click="by(song._id, song.DisplayName, song.Price, song.AlbumId)">buy</button>
                                     </div>
                                 </a>
                             </div>
@@ -81,6 +81,7 @@
                                             <span class="glyphicon glyphicon-cd" aria-hidden="true"></span>
                                         </div>
                                         <h4 class="serviceItem">{{ genre.DisplayName }}</h4>
+                                        <button type="button" class="btn btn-success" ng-click="by(genre._id, genre.DisplayName, genre.Price, genre.AlbumId)">buy</button>
                                     </div>
                                 </a>
                             </div>

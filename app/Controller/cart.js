@@ -53,7 +53,7 @@ app.controller("cartCtrl", function ($scope, $http, $routeParams, $cookies) {
         };
         $http({
             method: "POST",
-            url: "http://localhost:3000/api/v1/purchase",
+            url: "http://music-store-app-1312.herokuapp.com/api/v1/purchase",
             data: merchant,
             headers:{
                 Authorization: 'bearer' + ' ' + $cookies.get('webMusicStore_cookies'),
@@ -75,7 +75,7 @@ app.controller("cartCtrl", function ($scope, $http, $routeParams, $cookies) {
                 };
                 $http({
                     method: "POST",
-                    url: "http://localhost:3000/api/v1/purchaseitem",
+                    url: "http://music-store-app-1312.herokuapp.com/api/v1/purchaseitem",
                     data: merchant,
                     headers:{
                         Authorization: 'bearer' + ' ' + $cookies.get('webMusicStore_cookies'),
