@@ -74,7 +74,7 @@ app.controller("registerCtrl", function ($scope, $http, $cookies) {
         };
         $http({
             method: "POST",
-            url: "http://music-store-app-1312.herokuapp.com/api/v1/signup",
+            url: "https://music-store-app-1312.herokuapp.com/api/v1/signup",
             data: merchant
         }).then(function sucess(objet) {
             $cookies.put('webMusicStore_cookies', objet.data.accessToken.accessToken);

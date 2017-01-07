@@ -17,7 +17,7 @@ app.controller("loginCtrl", function ($scope, $http, $cookies) {
         };
         $http({
             method: "POST",
-            url: "http://music-store-app-1312.herokuapp.com/api/v1/login",
+            url: "https://music-store-app-1312.herokuapp.com/api/v1/login",
             data: merchant
         }).then(function sucess(objet) {
 

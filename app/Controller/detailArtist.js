@@ -1,5 +1,5 @@
 app.controller("detailArtistCtrl", function ($scope, $http, $routeParams, $cookies) {
-    $http.get('http://music-store-app-1312.herokuapp.com/api/v1/artist/'+ $routeParams.id)
+    $http.get('https://music-store-app-1312.herokuapp.com/api/v1/artist/'+ $routeParams.id)
         .then(function (response) {
             $scope.artist = response.data;
         });

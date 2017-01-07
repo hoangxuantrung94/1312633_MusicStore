@@ -1,10 +1,10 @@
 app.controller("detailAlbumCtrl", function ($scope, $http, $routeParams, $cookies) {
-    $http.get('http://music-store-app-1312.herokuapp.com/api/v1/album/'+ $routeParams.id)
+    $http.get('https://music-store-app-1312.herokuapp.com/api/v1/album/'+ $routeParams.id)
         .then(function (response) {
             $scope.album = response.data;
         });
 
-    $http.get('http://music-store-app-1312.herokuapp.com/api/v1/song/album/'+ $routeParams.id)
+    $http.get('https://music-store-app-1312.herokuapp.com/api/v1/song/album/'+ $routeParams.id)
         .then(function (response) {
             $scope.songAlbum = response.data;
         });
