@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1df1e765-c5b4-40d6-91d0-50e2491b1b00" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/album.js" afterPath="$PROJECT_DIR$/app/Controller/album.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/artist.js" afterPath="$PROJECT_DIR$/app/Controller/artist.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/cart.js" afterPath="$PROJECT_DIR$/app/Controller/cart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/detailAlbum.js" afterPath="$PROJECT_DIR$/app/Controller/detailAlbum.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/detailArtist.js" afterPath="$PROJECT_DIR$/app/Controller/detailArtist.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/detailSongOfGenre.js" afterPath="$PROJECT_DIR$/app/Controller/detailSongOfGenre.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/genre.js" afterPath="$PROJECT_DIR$/app/Controller/genre.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/login.js" afterPath="$PROJECT_DIR$/app/Controller/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/register.js" afterPath="$PROJECT_DIR$/app/Controller/register.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/genre/genre.html" afterPath="$PROJECT_DIR$/app/views/genre/genre.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/login/login.css" afterPath="$PROJECT_DIR$/app/views/login/login.css" />
-    </list>
+    <list default="true" id="1df1e765-c5b4-40d6-91d0-50e2491b1b00" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -467,8 +454,8 @@
     <option name="totallyTimeSpent" value="155549000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1320" height="772" extended-state="1" />
-    <editor active="true" />
+    <frame x="54" y="-8" width="1320" height="772" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20398773" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
