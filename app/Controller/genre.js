@@ -44,6 +44,10 @@ app.controller("genreCtrl", function ($scope, $http, $cookies) {
     $scope.by = function (id, name, price, albumId) {
 
         $scope.checkLogin();
+        if($cookies.get('webMusicStore_cookies') == null){
+            $cookies.remove('byMusic');
+            window.location = '#/login';
+        }
         //$cookies.remove('byMusic');
         if($cookies.get('byMusic') != null){
 
